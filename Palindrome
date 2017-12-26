@@ -1,0 +1,25 @@
+def is_palindrome(word):
+    if word == word[::-1]:
+        print(word.capitalize() + ' is a palindrome.')
+    else:
+        print(word.capitalize() + ' is not a palindrome.')
+
+def check():
+    answer = input('Do you want to check another word (\'Y|N\')?: ')
+    if answer == 'Y' or answer == 'y':
+        palindrome_check()
+    elif answer == 'N' or answer == 'n' : 
+        print('Goodbye!')
+    else:
+        print('Your response is invalid. Try again!')
+        check()
+        
+def palindrome_check():
+    word = input('Enter word: ')
+    is_palindrome(word)
+    check()
+
+print('This program checks if a word is a palindrome.\nA \
+palindrome is a word that reads the same forward and backward.')
+
+palindrome_check()
